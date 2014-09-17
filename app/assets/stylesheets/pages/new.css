@@ -1,0 +1,19 @@
+.field {
+  margin: 0.67em 0;
+}
+
+input[type="text"], textarea {
+  border-color: black;
+}
+
+.field_with_errors {
+  display: inline;
+}
+
+.field_with_errors label {
+  color: red;
+}
+
+.field_with_errors input[type="text"], .field_with_errors textarea {
+  border-color: red;
+}
