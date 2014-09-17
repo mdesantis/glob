@@ -1,0 +1,12 @@
+article {
+  margin: 2em;
+}
+
+article p {
+  font-size: 1.1em;
+  text-indent: 1.1em;
+}
+
+article h1 {
+  font-family: 'Pacifico', cursive;
+}

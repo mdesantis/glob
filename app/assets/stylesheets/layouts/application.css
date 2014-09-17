@@ -1,0 +1,45 @@
+html {
+  font-family: 'Kotta One';
+}
+
+body {
+  min-width: 320px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header a .bullet {
+  transition: color 0.2s;
+}
+
+header a:hover .bullet {
+  color: #1EA61E;
+}
+
+header a:active .bullet {
+  color: white;
+}
+
+header h1 {
+  display: inline-block;
+  font-family: 'Pacifico', cursive;
+  font-size: 5em;
+  margin-top: 0.4em;
+  position: relative;
+  left: 0.5em;
+}
+
+header h1 sub {
+  font-size: 40%;
+  bottom: -1.7em;
+  margin-left: -3.9em;
+}
