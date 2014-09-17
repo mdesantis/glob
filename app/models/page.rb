@@ -1,7 +1,8 @@
 class Page < ActiveRecord::Base
   validates_presence_of :title
 
-  before_save :update_slug
+  after_create  :create_slug
+  before_update :update_slug
 
   def to_param
     return nil unless persisted?
@@ -11,8 +12,16 @@ class Page < ActiveRecord::Base
 
   private
 
+  def generate_slug
+    "#{id} #{title}".parameterize
+  end
+
+  def create_slug
+    update_column :slug, generate_slug
+  end
+
   def update_slug
-    self.slug = title.parameterize
+    self.slug = generate_slug
 
     true
   end
