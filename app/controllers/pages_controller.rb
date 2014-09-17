@@ -17,7 +17,7 @@ class PagesController < ApplicationController
   end
 
   def show
-    @page = Page.find(params[:id])
+    @page = Page.find_by_slug!(params[:slug])
   end
 
   private

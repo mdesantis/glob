@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   root 'pages#home'
 
-  get  'pages/new' => 'pages#new',    as: :new_page
-  post 'pages'     => 'pages#create', as: :pages
-  get  'pages/:id' => 'pages#show',   as: :page
+  get  'pages/new'   => 'pages#new',    as: :new_page
+  post 'pages'       => 'pages#create', as: :pages
+  get  'pages/:slug' => 'pages#show',   as: :page
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
