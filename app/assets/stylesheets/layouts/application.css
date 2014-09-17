@@ -61,3 +61,8 @@ main a:hover {
 main a:active {
   color: white;
 }
+
+main table {
+  border-spacing: 0.67em;
+  border-collapse: separate;
+}
