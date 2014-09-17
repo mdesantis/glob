@@ -24,6 +24,9 @@ class PagesController < ApplicationController
     @page = Page.find_by_slug!(params[:slug])
   end
 
+  def edit
+  end
+
   private
 
   def page_params
