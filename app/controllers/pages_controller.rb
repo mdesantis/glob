@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  before_action :set_page, only: [:show, :edit]
+  
   def home
   end
 
@@ -21,11 +23,9 @@ class PagesController < ApplicationController
   end
 
   def show
-    set_page
   end
 
   def edit
-    set_page
   end
 
   private
