@@ -48,3 +48,16 @@ header h1 sub {
   text-align: center;
   color: #1EA61E;
 }
+
+main a {
+  color: inherit;
+  transition: color 0.2s;
+}
+
+main a:hover {
+  color: #1EA61E;
+}
+
+main a:active {
+  color: white;
+}
