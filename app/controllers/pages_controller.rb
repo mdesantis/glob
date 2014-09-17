@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_action :set_page, only: [:show, :edit]
+  before_action :set_page, only: [:show, :edit, :update]
   
   def home
   end
@@ -29,6 +29,11 @@ class PagesController < ApplicationController
   end
 
   def update
+    if @page.update(page_params)
+      redirect_to @page, notice: 'Page was successfully updated.'
+    else
+      render :edit
+    end
   end
 
   private
