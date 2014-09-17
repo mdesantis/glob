@@ -43,3 +43,8 @@ header h1 sub {
   bottom: -1.7em;
   margin-left: -3.9em;
 }
+
+.notice {
+  text-align: center;
+  color: #1EA61E;
+}
