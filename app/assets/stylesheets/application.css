@@ -29,6 +29,23 @@ header {
   text-align: center;
 }
 
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header a .bullet {
+  transition: color 0.2s;
+}
+
+header a:hover .bullet {
+  color: #1EA61E;
+}
+
+header a:active .bullet {
+  color: white;
+}
+
 header h1 {
   display: inline-block;
   font-family: 'Pacifico', cursive;
