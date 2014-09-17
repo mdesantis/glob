@@ -21,14 +21,18 @@ class PagesController < ApplicationController
   end
 
   def show
-    @page = Page.find_by_slug!(params[:slug])
+    set_page
   end
 
   def edit
-    @page = Page.find_by_slug!(params[:slug])
+    set_page
   end
 
   private
+
+  def set_page
+    @page = Page.find_by_slug!(params[:slug])
+  end
 
   def page_params
     params.require(:page).permit(:title, :slug, :content)
