@@ -10,26 +10,27 @@ body {
 
 header {
   text-align: center;
+  margin: 0 2em;
 }
 
-header a {
+header a.logo {
   text-decoration: none;
   color: inherit;
 }
 
-header a .bullet {
+header a.logo .bullet {
   transition: color 0.2s;
 }
 
-header a:hover .bullet {
+header a.logo:hover .bullet {
   color: #1EA61E;
 }
 
-header a:active .bullet {
+header a.logo:active .bullet {
   color: white;
 }
 
-header h1 {
+header .logo h1 {
   display: inline-block;
   font-family: 'Pacifico', cursive;
   font-size: 5em;
@@ -38,10 +39,14 @@ header h1 {
   left: 0.5em;
 }
 
-header h1 sub {
+header .logo h1 sub {
   font-size: 40%;
   bottom: -1.7em;
   margin-left: -3.9em;
+}
+
+header nav {
+  text-align: right;
 }
 
 .notice {
@@ -53,16 +58,16 @@ main {
   margin: 2em;
 }
 
-main a {
+header nav a, main a {
   color: inherit;
   transition: color 0.2s;
 }
 
-main a:hover {
+header nav a:hover, main a:hover {
   color: #1EA61E;
 }
 
-main a:active {
+header nav a:active, main a:active {
   color: white;
 }
 
