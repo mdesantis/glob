@@ -8,7 +8,7 @@
     <%= favicon_link_tag 'favicon.png', type: 'image/png' %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-    <link href='http://fonts.googleapis.com/css?family=Pacifico|Kotta+One' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Pacifico|Open+Sans+Condensed:300|Kotta+One|Crimson+Text' rel='stylesheet' type='text/css'>
 
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
@@ -19,8 +19,7 @@
       <a href="<%= root_path %>" class="logo">
         <h1>GL<span class="bullet">•</span>B <sub>a Great Little Blog.</sub></h1>
       </a>
-
-      <nav><%= link_to 'Manage pages', pages_path %></nav>
+      <nav><%= link_to '♥', pages_path, title: 'Manage pages' %></nav>
     </header>
 
     <% if notice -%>

@@ -6,8 +6,8 @@ hr.pages_spacer {
 }
 
 hr.pages_spacer:after {
-  content: "§";
-  font-family: "Pacifico",cursive;
+  content: '§';
+  font-family: 'Pacifico', cursive;
   font-size: 2em;
   position: relative;
   top: -1em;
