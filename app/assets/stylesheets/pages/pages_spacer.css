@@ -1,0 +1,14 @@
+hr.pages_spacer {
+  border: none;
+  color: black;
+  text-align: center;
+  margin: 3em 0;
+}
+
+hr.pages_spacer:after {
+  content: "§";
+  font-family: "Pacifico",cursive;
+  font-size: 2em;
+  position: relative;
+  top: -1em;
+}
