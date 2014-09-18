@@ -6,7 +6,10 @@
   <table>
     <thead>
       <tr>
+        <th>ID</th>
         <th>Title</th>
+        <th>Created</th>
+        <th>Updated</th>
         <th colspan="2"></th>
       </tr>
     </thead>
@@ -14,7 +17,10 @@
     <tbody>
       <% @pages.each do |page| %>
         <tr>
+          <td><%= page.id %></td>
           <td><%= link_to page.title, page %></td>
+          <td><%= time_ago_in_words page.created_at %> ago</td>
+          <td><%= time_ago_in_words page.updated_at %> ago</td>
           <td class="action"><%= link_to 'Edit', edit_page_path(page) %></td>
           <td class="action"><%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
