@@ -44,7 +44,7 @@ class PagesController < ApplicationController
   private
 
   def set_pages
-    @pages = Page.all
+    @pages = Page.all.order(id: :desc)
   end
 
   def set_page
