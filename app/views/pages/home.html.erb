@@ -1,7 +1,1 @@
-<% @pages.each do |page| -%>
-  <article>
-    <h1><%= page.title %></h1>
-
-    <p><%= page.content %></p>
-  </article>
-<% end -%>
+<%= render partial: 'page', collection: @pages %>
