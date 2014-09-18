@@ -10,7 +10,6 @@ body {
 
 header {
   text-align: center;
-  margin: 0 2em;
 }
 
 header a.logo {
@@ -54,8 +53,13 @@ header nav {
   color: #1EA61E;
 }
 
+header, main {
+  margin-left: 2.5em;
+  margin-right: 2.5em;
+}
+
 main {
-  margin: 2em;
+  margin: 2.5em;
 }
 
 header nav a, main a {
