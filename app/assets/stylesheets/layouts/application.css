@@ -23,7 +23,7 @@ header a.logo .bullet {
 }
 
 header a.logo:hover .bullet {
-  color: #1EA61E;
+  color: #D3360B;
 }
 
 header a.logo:active .bullet {
@@ -69,7 +69,7 @@ header nav a, main a {
 }
 
 header nav a:hover, main a:hover {
-  color: #1EA61E;
+  color: #D3360B;
 }
 
 header nav a:active, main a:active {
