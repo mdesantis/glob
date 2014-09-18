@@ -1,11 +1,12 @@
 class PagesController < ApplicationController
   before_action :set_page,  only: [:show, :edit, :update, :destroy]
   before_action :set_pages, only: [:home, :index]
-  
+
   def home
   end
 
   def index
+    title_tag_breadcrumbs << 'Pages'
   end
 
   def new
@@ -23,9 +24,11 @@ class PagesController < ApplicationController
   end
 
   def show
+    title_tag_breadcrumbs << @page.title
   end
 
   def edit
+    title_tag_breadcrumbs << @page.title << 'Edit'
   end
 
   def update

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>GL•B</title>
+    <title><%= title_tag_content %></title>
     <%= favicon_link_tag 'favicon.png', type: 'image/png' %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -16,10 +16,10 @@
   </head>
   <body>
     <header>
-      <a href="<%= root_path %>" class="logo">
+      <a href="<%= root_path %>" class="logo" title="Home">
         <h1>GL<span class="bullet">•</span>B <sub>a Great Little Blog.</sub></h1>
       </a>
-      <nav><%= link_to '♥', pages_path, title: 'Manage pages' %></nav>
+      <nav><%= link_to '♥', pages_path, title: 'Pages' %></nav>
     </header>
 
     <% if notice -%>
