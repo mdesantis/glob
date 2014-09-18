@@ -1,9 +1,18 @@
 .field {
-  margin: 0.67em 0;
+  margin: 1em 0;
+}
+
+label {
+  line-height: 150%;
 }
 
 input[type="text"], textarea {
+  width: 100%;
   border-color: black;
+}
+
+textarea {
+  height: 300px;
 }
 
 .field_with_errors {
