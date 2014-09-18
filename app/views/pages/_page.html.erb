@@ -1,5 +1,5 @@
 <article>
   <h1><%= link_to page.title, page %></h1>
 
-  <p><%= page.content %></p>
+  <div><%= page.content.try :html_safe %></div>
 </article>
