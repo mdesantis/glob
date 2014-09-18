@@ -26,3 +26,7 @@ textarea {
 .field_with_errors input[type="text"], .field_with_errors textarea {
   border-color: red;
 }
+
+.actions .back {
+  margin-left: 0.5em;
+}
