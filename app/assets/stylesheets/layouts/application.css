@@ -1,5 +1,6 @@
 html {
   font-family: 'Kotta One';
+  font-size: 1.1em;
 }
 
 body {
@@ -32,8 +33,8 @@ header a.logo:active .bullet {
 header .logo h1 {
   display: inline-block;
   font-family: 'Pacifico', cursive;
-  font-size: 5.5em;
-  margin-top: 0.4em;
+  font-size: 5em;
+  margin: 0.4em 0 0.8em;
   position: relative;
   left: 0.5em;
 }
@@ -76,10 +77,10 @@ header nav a:active, main a:active {
 }
 
 main table {
-  border-spacing: 0.67em;
+  border-spacing: 0.75em;
   border-collapse: separate;
 }
 
 .title {
-  font-size: 2.5em;
+  font-size: 2.3em;
 }
