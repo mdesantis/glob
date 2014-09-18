@@ -1,11 +1,11 @@
 class PagesController < ApplicationController
-  before_action :set_page, only: [:show, :edit, :update, :destroy]
+  before_action :set_page,  only: [:show, :edit, :update, :destroy]
+  before_action :set_pages, only: [:home, :index]
   
   def home
   end
 
   def index
-    @pages = Page.all
   end
 
   def new
@@ -42,6 +42,10 @@ class PagesController < ApplicationController
   end
 
   private
+
+  def set_pages
+    @pages = Page.all
+  end
 
   def set_page
     @page = Page.find_by_slug!(params[:slug])

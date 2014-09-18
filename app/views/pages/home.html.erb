@@ -1,7 +1,7 @@
-<article>
-  <h1>Lorem ipsum</h1>
+<% @pages.each do |page| -%>
+  <article>
+    <h1><%= page.title %></h1>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla at elit ac semper. Pellentesque viverra nisi ut lacus placerat mattis. Morbi placerat purus diam, at venenatis sapien lacinia a. Nullam accumsan accumsan dui. Quisque feugiat feugiat fringilla. Vivamus iaculis ultrices vestibulum. Sed efficitur sem sed ipsum facilisis, ut tincidunt mauris consectetur. Suspendisse tempor gravida malesuada. Vestibulum nisl augue, varius quis maximus eget, tincidunt sed urna. Phasellus pulvinar massa in viverra rutrum. Ut ex nunc, luctus at massa in, posuere tincidunt erat. Suspendisse elementum feugiat dolor vel rhoncus.</p>
-
-  <p>Praesent mattis molestie justo, accumsan pretium lorem feugiat nec. Donec leo sem, accumsan et posuere ut, auctor in libero. Donec id consequat justo. Praesent ut fermentum augue, ut pharetra nisl. Pellentesque at varius elit, a semper ipsum. Etiam a arcu in felis convallis consectetur quis a sapien. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam tincidunt turpis orci, in viverra odio dignissim in.</p>
-</article>
+    <p><%= page.content %></p>
+  </article>
+<% end -%>
