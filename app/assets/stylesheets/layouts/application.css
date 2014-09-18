@@ -79,3 +79,7 @@ main table {
   border-spacing: 0.67em;
   border-collapse: separate;
 }
+
+.title {
+  font-size: 2.5em;
+}
