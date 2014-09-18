@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_action :set_page, only: [:show, :edit, :update]
+  before_action :set_page, only: [:show, :edit, :update, :destroy]
   
   def home
   end
@@ -37,6 +37,8 @@ class PagesController < ApplicationController
   end
 
   def destroy
+    @page.destroy
+    redirect_to pages_url, notice: 'Page was successfully destroyed.'
   end
 
   private
