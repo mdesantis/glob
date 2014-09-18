@@ -11,4 +11,5 @@ hr.pages_spacer:after {
   font-size: 2em;
   position: relative;
   top: -1em;
+  cursor: default;
 }
