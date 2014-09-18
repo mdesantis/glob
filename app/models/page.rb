@@ -1,6 +1,7 @@
 class Page < ActiveRecord::Base
   validates_presence_of :title
 
+  before_save   :convert_content_to_valid_html
   after_create  :create_slug
   before_update :update_slug
 
@@ -22,6 +23,12 @@ class Page < ActiveRecord::Base
 
   def update_slug
     self.slug = generate_slug
+
+    true
+  end
+
+  def convert_content_to_valid_html
+    self.content = Nokogiri::HTML::DocumentFragment.parse(content).to_html if content
 
     true
   end
