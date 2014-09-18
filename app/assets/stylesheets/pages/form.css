@@ -8,7 +8,9 @@ label {
 
 input[type="text"], textarea {
   width: 100%;
+  border-width: 1px;
   border-color: black;
+  padding: 2px;
 }
 
 textarea {
