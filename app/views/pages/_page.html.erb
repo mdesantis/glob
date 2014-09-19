@@ -12,31 +12,7 @@
 
   <div class="content"><%= page_content page %></div>
 
-  <%= form_for(@page_comment, url: @page_comment.new_record? ? page_comments_path(page_slug: @page_comment.page.slug, anchor: 'new_comment') : page_comment_path(@page_comment)) do |f| %>
-    <% if @page_comment.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@page_comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
-
-        <ul>
-        <% @page_comment.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-        </ul>
-      </div>
-    <% end %>
-
-    <div class="field">
-      <%= f.label :author %><br>
-      <%= f.text_field :author %>
-    </div>
-    <div class="field">
-      <%= f.label :content %><br>
-      <%= f.text_area :content %>
-    </div>
-    <div class="actions">
-      <%= f.submit %>
-    </div>
-  <% end %>
+  <%= render partial: 'pages/page_comment_form' %>
 
   <p class="comments_count"><small><%= pluralize page.comments.size, 'comment' %></small></p>
 </article>
