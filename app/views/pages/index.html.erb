@@ -10,6 +10,7 @@
         <th>Title</th>
         <th>Created</th>
         <th>Updated</th>
+        <th>Comments</th>
         <th colspan="2"></th>
       </tr>
     </thead>
@@ -21,6 +22,7 @@
           <td><%= link_to page.title, page %></td>
           <td><%= time_ago_in_words page.created_at %> ago</td>
           <td><%= time_ago_in_words page.updated_at %> ago</td>
+          <td><%= link_to page.comments.size, page_path(page, anchor: 'comments') %></td>
           <td class="action"><%= link_to 'Edit', edit_page_path(page) %></td>
           <td class="action"><%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
