@@ -1,4 +1,5 @@
-.comments_count {
+.timestamps, .comments_count {
+  display: block;
   font-variant: small-caps;
   font-family: "Kotta One", serif;
   font-size: 0.8em;

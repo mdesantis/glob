@@ -1,6 +1,13 @@
 <article>
   <h1 class="title"><%= link_to_if link_title, page.title, page, id: page.slug %></h1>
 
+  <small class="timestamps">
+    Created on <%= page.created_at.localtime.strftime '%A, %e %B %Y at %k:%M %:z' %><br>
+    <% if page.created_at != page.updated_at -%>
+      Updated on <%= page.updated_at.localtime.strftime '%A, %e %B %Y at %k:%M %:z' %>
+    <% end -%>
+  </small>
+
   <div class="content"><%= page_content page %></div>
 
   <small class="comments_count"><%= pluralize page.comments.size, 'comment' %></small>
