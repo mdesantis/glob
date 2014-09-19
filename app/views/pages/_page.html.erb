@@ -2,4 +2,6 @@
   <h1 class="title"><%= link_to_if link_title, page.title, page, id: page.slug %></h1>
 
   <div class="content"><%= page_content page %></div>
+
+  <div class="comments_count"><%= pluralize page.comments.size, 'comment' %></div>
 </article>
