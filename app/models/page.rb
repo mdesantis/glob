@@ -1,5 +1,13 @@
 class Page < ActiveRecord::Base
-  validates_presence_of :title
+  module Markups
+    PARAGRAPHS = 'Paragraphs'.freeze
+    HTML       = 'HTML'.freeze
+  end
+
+  MARKUPS = [Markups::PARAGRAPHS, Markups::HTML]
+
+  validates_presence_of  :title
+  validates_inclusion_of :markup, in: MARKUPS
 
   before_save   :convert_content_to_valid_html
   after_create  :create_slug
@@ -28,7 +36,9 @@ class Page < ActiveRecord::Base
   end
 
   def convert_content_to_valid_html
-    self.content = Nokogiri::HTML::DocumentFragment.parse(content).to_html if content
+    if content && markup == Markups::PARAGRAPHS
+      self.content = Nokogiri::HTML::DocumentFragment.parse(content).to_html
+    end
 
     true
   end
