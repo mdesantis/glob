@@ -1,14 +1,7 @@
 Rails.application.routes.draw do
   root 'pages#home'
 
-  get    'pages'            => 'pages#index',  as: :pages
-  post   'pages'            => 'pages#create'
-  get    'pages/new'        => 'pages#new',    as: :new_page
-  get    'pages/:slug/edit' => 'pages#edit',   as: :edit_page
-  get    'pages/:slug'      => 'pages#show',   as: :page
-  patch  'pages/:slug'      => 'pages#update'
-  put    'pages/:slug'      => 'pages#update'
-  delete 'pages/:slug'      => 'pages#destroy'
+  resources :pages, param: :slug
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
