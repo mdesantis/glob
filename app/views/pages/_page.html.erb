@@ -16,10 +16,12 @@
     <%= render partial: 'pages/page_comment_form' %>
   <% end -%>
 
-  <p class="comments_count"><small><%= pluralize page.comments.size, 'comment' %></small></p>
+  <p class="comments_count">
+    <%= link_to_if wrap_comments_count_with_link, content_tag(:small, pluralize(page.comments.size, 'comment')), page_path(page, anchor: 'comments') %>
+  </p>
 
   <% if show_comments && page.comments.size > 0 -%>
-    <section class="comments">
+    <section id="comments" class="comments">
       <%= content_tag_for :article, page.comments.order(id: :desc) do |comment| %>
         <p class="comment_title">
         <small>
