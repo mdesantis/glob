@@ -1,0 +1,4 @@
+<% if @page_comment.new_record? -%>
+  $('#new_comment').replaceWith('<%=j render partial: 'pages/page_comment_form' %>');
+<% else -%>
+<% end -%>

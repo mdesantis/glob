@@ -3,10 +3,13 @@ class CommentsController < ApplicationController
     @page = Page.find_by_slug!(params[:page_slug])
     @page_comment = @page.comments.build(comment_params)
 
-    if @page_comment.save
-      redirect_to page_path(@page, anchor: "comment_#{@page_comment.id}"), notice: 'Comment was successfully created.'
-    else
-      render 'pages/show'
+    respond_to do |format|
+      if @page_comment.save
+        redirect_to page_path(@page, anchor: "comment_#{@page_comment.id}"), notice: 'Comment was successfully created.'
+      else
+        format.html { render 'pages/show' }
+        format.js { render 'pages/create_page_comment' }
+      end
     end
   end
 
