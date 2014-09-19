@@ -6,7 +6,7 @@ module PagesHelper
 
     case page.markup
     when Page::Markups::PARAGRAPHS
-      ERB::Util.html_escape(content).gsub(/^(.+)$/, '<p>\1</p>').html_safe
+      content.paragraphize.html_safe
     when Page::Markups::HTML
       content.html_safe
     end

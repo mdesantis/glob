@@ -3,6 +3,6 @@
     <p class="comment_title">
       <small>On <%=l comment.created_at.localtime, format: :human_long %>, <%= comment.author %> wrote</small>
     </p>
-    <p class="comment_content"><%= comment.content %></p>
+    <p class="comment_content"><%= comment_content comment %></p>
   <% end %>
 </section>
