@@ -27,6 +27,8 @@ class PagesController < ApplicationController
 
   def show
     title_tag_breadcrumbs << @page.title
+
+    @page_comment = @page.comments.build
   end
 
   def edit
