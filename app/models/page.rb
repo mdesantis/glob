@@ -6,6 +6,8 @@ class Page < ActiveRecord::Base
 
   MARKUPS = [Markups::PARAGRAPHS, Markups::HTML]
 
+  has_many :comments, dependent: :destroy
+
   validates_presence_of  :title
   validates_inclusion_of :markup, in: MARKUPS
 
