@@ -3,9 +3,9 @@
 
   <p class="timestamps">
     <small>
-      Created on <%= page.created_at.localtime.strftime '%A, %e %B %Y at %k:%M %:z' %><br>
+      Created on <%=l page.created_at.localtime, format: :human_long %><br>
       <% if page.created_at != page.updated_at -%>
-        Updated on <%= page.updated_at.localtime.strftime '%A, %e %B %Y at %k:%M %:z' %>
+        Updated on <%=l page.updated_at.localtime, format: :human_long %>
       <% end -%>
     </small>
   </p>
@@ -23,7 +23,7 @@
       <%= content_tag_for :article, page.comments.order(id: :desc) do |comment| %>
         <p class="comment_title">
         <small>
-          On <span class="created_at"><%= comment.created_at.localtime.strftime '%A, %e %B %Y at %k:%M %:z' %></span>, <span class="comment_author"><%= comment.author %></span> wrote
+          On <span class="created_at"><%=l comment.created_at.localtime, format: :human_long %></span>, <span class="comment_author"><%= comment.author %></span> wrote
         </small>
         </p>
         <p class="comment_content"><%= comment.content %></p>
