@@ -1,1 +1,12 @@
+<% if @pages.many? -%>
+  <nav class="pages_navigation">
+    <span>Pages</span>
+    <ul>
+    <% @pages.each do |page| -%>
+      <li><%= link_to page.title, "##{page.slug}" %></li>
+    <% end -%>
+    </ul>
+  </nav>
+<% end -%>
+
 <%= render partial: @pages, locals: { link_title: true }, spacer_template: 'pages_spacer' %>

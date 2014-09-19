@@ -1,0 +1,24 @@
+.pages_navigation {
+  float: right;
+  font-family: 'Kotta One', serif;
+  max-width: 33%;
+  margin-top: 2em;
+  margin-left: 1em;
+}
+
+.pages_navigation span {
+  font-family: "Pacifico", cursive;
+  font-size: 1.2em;
+}
+
+.pages_navigation ul {
+  font-size: 0.9em;
+  list-style-type: circle;
+  padding-left: 1.2em;
+  color: #F44717;
+}
+
+.pages_navigation li {
+  margin: 0.67em 0;
+  color: #F44717;
+}

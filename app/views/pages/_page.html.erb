@@ -1,5 +1,5 @@
 <article>
-  <h1 class="title"><%= link_to_if link_title, page.title, page %></h1>
+  <h1 class="title"><%= link_to_if link_title, page.title, page, id: page.slug %></h1>
 
   <div class="content"><%= page.content.try :html_safe %></div>
 </article>
