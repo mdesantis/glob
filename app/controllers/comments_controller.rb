@@ -5,7 +5,8 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @page_comment.save
-        redirect_to page_path(@page, anchor: "comment_#{@page_comment.id}"), notice: 'Comment was successfully created.'
+        format.html { redirect_to page_path(@page, anchor: "comment_#{@page_comment.id}"), notice: 'Comment was successfully created.' }
+        format.js { render 'pages/create_page_comment' }
       else
         format.html { render 'pages/show' }
         format.js { render 'pages/create_page_comment' }

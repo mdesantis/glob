@@ -16,20 +16,9 @@
     <%= render partial: 'pages/page_comment_form' %>
   <% end -%>
 
-  <p class="comments_count">
-    <%= link_to_if wrap_comments_count_with_link, content_tag(:small, pluralize(page.comments.size, 'comment')), page_path(page, anchor: 'comments') %>
-  </p>
+  <%= render partial: 'pages/page_comments_count', locals: { page: page, wrap_comments_count_with_link: wrap_comments_count_with_link } %>
 
   <% if show_comments && page.comments.size > 0 -%>
-    <section id="comments" class="comments">
-      <%= content_tag_for :article, page.comments.order(id: :desc) do |comment| %>
-        <p class="comment_title">
-        <small>
-          On <%=l comment.created_at.localtime, format: :human_long %>, <%= comment.author %> wrote
-        </small>
-        </p>
-        <p class="comment_content"><%= comment.content %></p>
-      <% end %>
-    </section>
+    <%= render partial: 'page_comments', object: page.comments.order(id: :desc) %>
   <% end -%>
 </article>

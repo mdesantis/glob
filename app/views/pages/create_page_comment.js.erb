@@ -1,4 +1,11 @@
 <% if @page_comment.new_record? -%>
   $('#new_comment').replaceWith('<%=j render partial: 'pages/page_comment_form' %>');
 <% else -%>
+  $('#comments_count').replaceWith('<%=j render partial: 'pages/page_comments_count', locals: { page: @page, wrap_comments_count_with_link: false } %>');
+  $('#comments').replaceWith('<%=j render partial: 'pages/page_comments', object: @page.comments.order(id: :desc) %>');
+
+  location.hash = '#comment_<%=j @page_comment.id.to_s %>';
+
+  <% @page_comment = Comment.new page: @page -%>
+  $('#new_comment').replaceWith('<%=j render partial: 'pages/page_comment_form' %>');
 <% end -%>
