@@ -1,5 +1,5 @@
 <article>
-  <h1 class="title"><%= link_to_if link_title, page.title, page, id: page.slug %></h1>
+  <h1 class="title"><%= link_to_if wrap_title_with_link, page.title, page, id: page.slug %></h1>
 
   <p class="timestamps">
     <small>
@@ -12,7 +12,9 @@
 
   <div class="content"><%= page_content page %></div>
 
-  <%= render partial: 'pages/page_comment_form' %>
+  <% if show_comment_form -%>
+    <%= render partial: 'pages/page_comment_form' %>
+  <% end -%>
 
   <p class="comments_count"><small><%= pluralize page.comments.size, 'comment' %></small></p>
 </article>
