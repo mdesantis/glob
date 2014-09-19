@@ -4,3 +4,25 @@
   font-family: "Kotta One", serif;
   margin-left: 0.8em;
 }
+
+.comments {
+  margin-left: 1em;
+}
+
+.comments .comment_title {
+  font-style: italic;
+}
+
+.comments .created_at, .comments .comment_author {
+  font-style: normal;
+}
+
+.comments .comment_author {
+  font-family: "Pacifico", cursive;
+  font-size: 1.2em;
+  margin: 0 0.1em;
+}
+
+.comments .comment_content {
+  margin: 1em;
+}

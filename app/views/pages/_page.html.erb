@@ -17,4 +17,17 @@
   <% end -%>
 
   <p class="comments_count"><small><%= pluralize page.comments.size, 'comment' %></small></p>
+
+  <% if show_comments && page.comments.size > 0 -%>
+    <section class="comments">
+      <%= content_tag_for :article, page.comments.order(id: :desc) do |comment| %>
+        <p class="comment_title">
+        <small>
+          On <span class="created_at"><%= comment.created_at.localtime.strftime '%A, %e %B %Y at %k:%M %:z' %></span>, <span class="comment_author"><%= comment.author %></span> wrote
+        </small>
+        </p>
+        <p class="comment_content"><%= comment.content %></p>
+      <% end %>
+    </section>
+  <% end -%>
 </article>
