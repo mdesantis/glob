@@ -6,7 +6,7 @@ class PagesController < ApplicationController
   end
 
   def index
-    title_tag_breadcrumbs << 'Pages'
+    title_tag_breadcrumbs << 'Manage pages'
   end
 
   def new
