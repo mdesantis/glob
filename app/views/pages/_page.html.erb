@@ -23,7 +23,7 @@
       <%= content_tag_for :article, page.comments.order(id: :desc) do |comment| %>
         <p class="comment_title">
         <small>
-          On <span class="created_at"><%=l comment.created_at.localtime, format: :human_long %></span>, <span class="comment_author"><%= comment.author %></span> wrote
+          On <%=l comment.created_at.localtime, format: :human_long %>, <%= comment.author %> wrote
         </small>
         </p>
         <p class="comment_content"><%= comment.content %></p>

@@ -10,17 +10,8 @@
 }
 
 .comments .comment_title {
-  font-style: italic;
-}
-
-.comments .created_at, .comments .comment_author {
-  font-style: normal;
-}
-
-.comments .comment_author {
-  font-family: "Pacifico", cursive;
-  font-size: 1.2em;
-  margin: 0 0.1em;
+  font-variant: small-caps;
+  font-weight: bold;
 }
 
 .comments .comment_content {
