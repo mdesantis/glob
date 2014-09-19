@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'pages#home'
 
   resources :pages, param: :slug do
-    resources :comments, only: [:create, :update, :destroy]
+    resources :comments, only: :create
   end
   
   # The priority is based upon order of creation: first created -> highest priority.
