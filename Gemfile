@@ -44,4 +44,8 @@ gem 'unicorn'
 # HTML parser
 gem 'nokogiri'
 
+# Required for deploy on Heroku
 gem 'rails_12factor', group: :production
+
+# Shim to load environment variables from .env into ENV in development
+gem 'dotenv-rails', groups: [:development, :test]

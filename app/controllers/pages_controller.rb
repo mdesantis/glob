@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  http_basic_authenticate_with name: ENV['GLOB_USERNAME'], password:  ENV['GLOB_PASSWORD'], realm: 'GLOB', except: [:home, :show]
+
   before_action :set_page,  only: [:show, :edit, :update, :destroy]
   before_action :set_pages, only: [:home, :index]
 
