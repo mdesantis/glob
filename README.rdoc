@@ -1,28 +1,31 @@
-== README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+                   ***     ***
+                 **   ** **   **
+                *       *       *
+                *               *
+                 *             *
+                  **         **
+                    **     **
+                      ** **
+                        *
+     ____       _ _        ____ _      _
+    |  _ \ __ _(_) |___   / ___(_)_ __| |___
+    | |_) / _` | | / __| | |  _| | '__| / __|
+    |  _ < (_| | | \__ \ | |_| | | |  | \__ \
+    |_| \_\__,_|_|_|___/  \____|_|_|  |_|___/
 
-Things you may want to cover:
+---------------------------------------------
 
-* Ruby version
+== Welcome to the GLoB Rails Girls app!
 
-* System dependencies
+In this app, users can manage pages and pages comments.
 
-* Configuration
+Pages have title and content, and the content markup is customizable between Paragraphs, HTML and Markdown formats.
 
-* Database creation
+== Installation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+1. Clone the repository
+2. Run <tt>bundle install</tt>
+3. Run <tt>rake db:setup</tt>
+4. Run <tt>rails server</tt>
+5. Enjoy! ❤
