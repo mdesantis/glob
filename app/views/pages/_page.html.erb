@@ -12,6 +12,9 @@
 
   <div class="content"><%= page_content page %></div>
 
+  <% if show_comment_form -%>
+    <%= render partial: 'pages/pages_spacer' %>
+  <% end -%>
 
   <div class="comments_area">
     <% if show_comment_form -%>
