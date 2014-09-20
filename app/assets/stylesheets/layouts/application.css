@@ -100,6 +100,18 @@ main table {
   border-collapse: separate;
 }
 
+fieldset {
+  border-color: #F4CABE;
+}
+
+legend {
+  padding: 0 0.5em;
+  font-family: 'Kotta One', serif;
+  position: relative;
+  left: 0.4em;
+  color: #F4A089;
+}
+
 .title {
   font-family: 'Kotta One', serif;
   font-size: 2.3em;

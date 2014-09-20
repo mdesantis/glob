@@ -5,16 +5,36 @@
   margin-left: 0.8em;
 }
 
-.comments {
-  margin-left: 1em;
+.timestamps {
+  margin-top: -0.67em;
+  margin-bottom: 2em;
 }
 
-.comments .comment_title {
+.comments_count {
+  font-size: 1.1em;
+  margin-top: 2em;
+}
+
+.comments_area {
+  font-size: 0.9em;
+  padding: 0 1em;
+}
+
+#comments {
+  margin: 2em 0 0 1.6em;
+}
+
+#comments .comment_title, #comments .comment_content {
+  margin: 1em 0;
+  font-size: 1.1em;
+}
+
+#comments .comment_title {
   font-variant: small-caps;
   font-weight: bold;
 }
 
-.comments .comment_content {
-  margin: 1em;
+#comments .comment_content {
   font-size: 0.85em;
+  margin-left: 1em;
 }

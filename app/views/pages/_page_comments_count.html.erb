@@ -1,3 +1,5 @@
 <p id="comments_count" class="comments_count">
-  <%= link_to_if wrap_comments_count_with_link, content_tag(:small, pluralize(page.comments.size, 'comment')), page_path(page, anchor: 'comments') %>
+  <%= link_to page_path(page, anchor: 'comments') do %>
+    <small><%= pluralize page.comments.size, 'comment' %></small>
+  <% end -%>
 </p>

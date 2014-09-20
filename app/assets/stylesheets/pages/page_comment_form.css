@@ -1,0 +1,15 @@
+.new_comment {
+  padding: 0 15%;
+}
+
+.new_comment fieldset {
+  padding-bottom: 2.33em;
+}
+
+.new_comment .fieldset_inner {
+  padding: 0 1em;
+}
+
+.new_comment textarea {
+  height: 180px;
+}

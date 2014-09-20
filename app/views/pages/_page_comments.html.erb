@@ -1,10 +1,10 @@
-<section id="comments" class="comments">
+<section id="comments">
   <% if page_comments.size > 0 -%>
     <%= content_tag_for :article, page_comments do |comment| %>
-      <p class="comment_title">
+      <div class="comment_title">
         <small>On <%=l comment.created_at.localtime, format: :human_long %>, <%= comment.author %> wrote</small>
-      </p>
-      <p class="comment_content"><%= comment_content comment %></p>
+      </div>
+      <div class="comment_content"><%= comment_content comment %></div>
     <% end %>
   <% end -%>
 </section>

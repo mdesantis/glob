@@ -12,13 +12,16 @@
 
   <div class="content"><%= page_content page %></div>
 
-  <% if show_comment_form -%>
-    <%= render partial: 'pages/page_comment_form' %>
-  <% end -%>
 
-  <%= render partial: 'pages/page_comments_count', locals: { page: page, wrap_comments_count_with_link: wrap_comments_count_with_link } %>
+  <div class="comments_area">
+    <% if show_comment_form -%>
+      <%= render partial: 'pages/page_comment_form' %>
+    <% end -%>
 
-  <% if show_comments -%>
-    <%= render partial: 'page_comments', object: page.comments.order(id: :desc) %>
-  <% end -%>
+    <%= render partial: 'pages/page_comments_count', locals: { page: page, wrap_comments_count_with_link: wrap_comments_count_with_link } %>
+
+    <% if show_comments -%>
+      <%= render partial: 'page_comments', object: page.comments.order(id: :desc) %>
+    <% end -%>
+  </div>
 </article>
