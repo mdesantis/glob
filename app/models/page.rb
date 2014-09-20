@@ -2,9 +2,10 @@ class Page < ActiveRecord::Base
   module Markups
     PARAGRAPHS = 'Paragraphs'.freeze
     HTML       = 'HTML'.freeze
+    MARKDOWN   = 'Markdown'.freeze
   end
 
-  MARKUPS = [Markups::PARAGRAPHS, Markups::HTML]
+  MARKUPS = [Markups::PARAGRAPHS, Markups::HTML, Markups::MARKDOWN]
 
   has_many :comments, dependent: :destroy
 

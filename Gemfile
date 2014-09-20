@@ -49,3 +49,6 @@ gem 'rails_12factor', group: :production
 
 # Shim to load environment variables from .env into ENV in development
 gem 'dotenv-rails', groups: [:development, :test]
+
+# Markdown parser
+gem 'kramdown'
