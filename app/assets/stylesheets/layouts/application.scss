@@ -1,20 +1,22 @@
+@import 'normalize.css/normalize.css';
+
 html {
   font-family: 'Crimson Text', serif;
   font-size: 1.2em;
 }
 
 body {
-  min-width: 400px;
+  min-width: 320px;
 }
 
 header {
   text-align: center;
   background-color: #F44717;
   color: #FFF;
-  padding: 0 2.5em;
 }
 
 header .logo {
+  display: inline-block;
   text-decoration: none;
   color: inherit;
 }
@@ -33,24 +35,21 @@ header .logo:active .bullet {
 }
 
 header .logo h1 {
-  display: inline-block;
   font-family: 'Pacifico', cursive;
   font-size: 4.5em;
   margin: 0;
-  position: relative;
-  left: 0.3em;
 }
 
-header .logo h1 small {
+header .logo h2 {
   position: relative;
-  font-size: 40%;
-  bottom: -1.7em;
-  margin-left: -3.9em;
+  bottom: 1.09em;
+  left: 1em;
+  margin: 0;
   font-family: 'Open Sans Condensed', sans-serif;
 }
 
 header nav {
-  padding: 0.5em 0 0.25em;
+  padding-bottom: 0.25em;
   text-align: right;
   font-family: 'Kotta One', serif;
   font-size: 2em;
@@ -63,6 +62,7 @@ header nav a {
   text-decoration: none;
   display: inline-block;
   transition: transform 0.3s;
+  margin-right: 0.5em;
 }
 
 header nav a:hover {
