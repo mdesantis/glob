@@ -1,4 +1,4 @@
-class Page < ActiveRecord::Base
+class Page < ApplicationRecord
   module Markups
     PARAGRAPHS = 'Paragraphs'.freeze
     HTML       = 'HTML'.freeze

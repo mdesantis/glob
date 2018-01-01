@@ -1,4 +1,4 @@
-html.turbolinks-progress-bar::before {
-  background-color: white !important;
-  height: 10px !important;
+.turbolinks-progress-bar {
+  height: 10px;
+  background-color: white;
 }

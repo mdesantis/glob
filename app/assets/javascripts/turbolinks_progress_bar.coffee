@@ -1,1 +1,1 @@
-Turbolinks.enableProgressBar()
+# Turbolinks.enableProgressBar()
