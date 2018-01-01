@@ -1,5 +1,8 @@
 @import 'normalize.css/normalize';
 
+@import url('https://fonts.googleapis.com/css?family=Pacifico&text=GL%E2%80%A2B+Pages+%C2%A7');
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,700,700i|Kotta+One');
+
 html {
   font-family: 'Crimson Text', serif;
   font-size: 1.2em;
@@ -41,11 +44,12 @@ header .logo h1 {
 }
 
 header .logo h2 {
-  position: relative;
-  bottom: 0.1em;
-  left: 1.1em;
   margin: 0;
-  font-family: 'Open Sans Condensed', sans-serif;
+  position: relative;
+  bottom: -0.22em;
+  left: 1.5em;
+  font-size: 1.2em;
+  font-family: 'Kotta One', serif;
 }
 
 header nav {
