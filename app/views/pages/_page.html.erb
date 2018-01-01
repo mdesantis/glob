@@ -10,7 +10,9 @@
     </small>
   </p>
 
-  <div class="content"><%= page_content page %></div>
+  <% if show_contents -%>
+    <div class="content"><%= page_content page %></div>
+  <% end -%>
 
   <% if show_comment_form -%>
     <%= render partial: 'pages/pages_spacer' %>

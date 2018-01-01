@@ -1,12 +1,3 @@
-<% if @pages.many? -%>
-  <nav class="pages_navigation">
-    <span>Pages</span>
-    <ul>
-    <% @pages.each do |page| -%>
-      <li><%= link_to page.title, "##{page.slug}" %></li>
-    <% end -%>
-    </ul>
-  </nav>
-<% end -%>
+<h1 class="home_posts">Recent posts</h1>
 
-<%= render partial: @pages, locals: { wrap_title_with_link: true, show_comments: false, show_comment_form: false, wrap_comments_count_with_link: true }, spacer_template: 'pages_spacer' %>
+<%= render partial: @pages, locals: { wrap_title_with_link: true, show_contents: false, show_comments: false, show_comment_form: false, wrap_comments_count_with_link: true }, spacer_template: 'pages_spacer' %>
